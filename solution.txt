@@ -1,0 +1,44 @@
+1 - Identify the bugs:
+    - The error is on line 3. A colon (:) was missing after the function `calculate_stats(numbers)`.
+
+    - The error is on line 10. A colon (:) was missing after the `if num > average` condition. 
+
+    - In this case, the error is on line 4, but it is linked to line 20. The issue arises because the `sum()` function cannot process strings. It requires integers or floats. On line 20, the `scores` array—`[85, 92, 78, 95, 88, "70", 93]`—contains a value that is a string; this value must be converted from a string to an integer.
+
+    - On line 30, the error indicated that the name 'average' was not defined. This happened because, on line 30, it was written as `result[average]`. This does not work because dictionary keys must be accessed using single quotes (' '), which were missing.
+
+2 - Name the error type:
+    - For line 3, the error type is SyntaxError
+
+    - For line 4, the error type is TypeError
+
+    - For line 30, the error type is NameError
+
+3 - Write the fix:
+    - For line 3, the solution is simply to add a colon (:). The code would look like this: def calculate_stats(numbers): 
+
+    - For line 10, the solution is simply to add a colon (:). The code would look like this: if num > average:
+
+    - To address line 4, we need to convert the data found on line 20. To do this, we should create a new list, perform the conversion, and add the converted data to this new list. In code, it would look like this:
+              new_scores = [] # to store the newly converted scores
+              # Converting strings to integers
+              for score in scores:
+                  new_scores.append(int(score)) # converts the value and adds it to the new list
+
+              result = calculate_stats(new_scores)
+
+    In this case, our variable `result` will now receive `new_scores`—which contains the converted data—instead of the original `scores`.
+
+    - For line 30, the solution is simply to add single quotes (' '). The code would look like this: 
+             before: result[average]
+             now: result['average']
+
+4 - Did you get help to fix the bug?
+    - As for the error on line 3, I resolved it on my own; I ran the program, encountered an error, read the error message in the terminal, identified the issue in the code, and fixed it.
+
+    - As for the error on line 10, I resolved it myself. After fixing line 3, I ran the program again, encountered another error, read the error message in the terminal, identified the issue in the code, and fixed it.
+
+    - I identified the error on line 4—which is linked to line 20—on my own. After resolving the issue on line 10, I ran the code again and encountered an error indicating that the `sum()` function cannot be used if one or more data entries are in string format; therefore, I decided to perform a conversion. To find a solution, I sought help from an AI by asking the following in ChatGPT:
+            "How can I convert data in a list—for example, `[20, "15", 10]`—to calculate the average? Please explain how to do this and provide some examples."
+    
+    - As for the error on line 30, I resolved it myself. After fixing line 4, I ran the program again, encountered another error, read the error message in the terminal, identified the issue in the code, and fixed it.
