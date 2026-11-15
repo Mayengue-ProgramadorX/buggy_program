@@ -1,0 +1,50 @@
+AI Suggestion Evaluation
+
+Suggestion 1: Replace multiple counters with a dictionary for grade distribution
+
+Evaluation: This suggestion improves code organization and reduces the number of variables needed to track grades. It makes the program easier to maintain and update.
+
+Decision: Implemented.
+
+Verification: The program correctly counts and displays the number of students in each grade category (A, B, C, D, and F). Testing confirmed the results remained accurate.
+
+
+Suggestion 2: Replace isdigit() with try/except
+
+Evaluation: This approach provides more reliable input validation and follows common Python practices. It handles invalid user input more effectively.
+
+Decision: Implemented.
+
+Verification: The program was tested with valid numbers and invalid inputs such as letters and symbols. Invalid inputs are handled without crashing the program.
+
+
+Suggestion 3: Create functions to organize the code
+
+Evaluation: Separating the logic into functions improves readability, reusability, and maintainability. It also makes the program easier to expand in the future.
+
+Decision: Implemented.
+
+Verification: All calculations and output continue to work correctly after moving the logic into functions.
+
+
+Suggestion 4: Validate score range (0-100)
+
+Evaluation: This prevents unrealistic or invalid grades from being added to the dataset and improves data quality.
+
+Decision: Implemented.
+
+Verification: Scores within the range 0-100 are accepted, while values outside that range are rejected with an appropriate message.
+
+
+Suggestion 5: Handle an empty score list
+
+Evaluation: This prevents runtime errors such as division by zero and errors from calling max() or min() on an empty list.
+
+Decision: Implemented.
+
+Verification: When no scores are available, the program displays an appropriate message and does not crash.
+
+
+Overall Result
+
+All suggested improvements were implemented successfully. The updated version of the program is more organized, reliable, and easier to maintain. After testing all changes, the program continued to function correctly and produced accurate results.
